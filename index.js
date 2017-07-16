@@ -6,7 +6,7 @@
  *   or a UNIX timestamp in (milli/micro/nano)seconds
  * @return {String} ISO8601/RFC3339 `YYYY-MM-DDTHH:MM:SS` string in the local timezone
  */
-export default function localISOdt(d = new Date()) {
+export function localISOdt(d = new Date()) {
   if (/^\d\d\d\d-\d\d-\d\d/.test(d)) return d;  // leave YYYY-MM-DD strings unchanged
   if (/^\d+\.?\d*$/.test(d)) {
     // We have a (possibly fractional) number. Date takes a millisecond argument, so

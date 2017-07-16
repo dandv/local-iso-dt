@@ -1,4 +1,4 @@
-import localISOdt from '.';
+import { localISOdt } from '.';
 
 describe('strings', () => {
   test('YYYY-MM-DD', () => {

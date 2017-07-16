@@ -23,6 +23,9 @@ yarn add local-iso-dt
 # Usage
 
 ```js
+import { localISOdt } from 'local-iso-dt';  // or ...
+const { localISOdt } = require('local-iso-dt');
+
 // Prefix log messages with the current date in the local timezone in YYYY-MM-DDTHH:MM:SS format
 console.log(localISOdt(), 'Starting job...');
 
