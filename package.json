@@ -1,0 +1,47 @@
+{
+  "name": "local-iso-dt",
+  "version": "1.1.0",
+  "description": "Convert the most common types of dates into ISO8601/RFC3339-formatted YYYY-MM-DDTHH:MM:SS strings in the local timezone",
+  "main": "lib/index.js",
+  "module": "index.js",
+  "files": [
+    "index.js",
+    "lib/index.js"
+  ],
+  "scripts": {
+    "lint": "eslint index*.js",
+    "prepare": "babel index.js -d lib --minified --no-comments",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dandv/local-iso-dt.git"
+  },
+  "author": {
+    "name": "Dan Dascalescu",
+    "url": "https://dandascalescu.com/about"
+  },
+  "keywords": [
+    "datetime",
+    "date",
+    "time",
+    "format",
+    "string",
+    "convert",
+    "local",
+    "timezone",
+    "ISO8601",
+    "RFC3339"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "eslint": "^3",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "jest": "^20.0.4"
+  }
+}
