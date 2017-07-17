@@ -13,6 +13,7 @@ Supports and automatically detects the parameter being a:
 * number of seconds/milliseconds/microseconds/nanoseconds since epoch
 * [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object
 * `YYYY-MM-DD[THH:MM:SS]` string
+* falsy value - the current date will be returned
 
 # Install
 
@@ -24,7 +25,7 @@ yarn add local-iso-dt
 
 ```js
 import { localISOdt } from 'local-iso-dt';  // or ...
-const { localISOdt } = require('local-iso-dt');
+// const { localISOdt } = require('local-iso-dt');
 
 // Prefix log messages with the current date in the
 // local timezone in YYYY-MM-DDTHH:MM:SS format
