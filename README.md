@@ -26,10 +26,12 @@ yarn add local-iso-dt
 import { localISOdt } from 'local-iso-dt';  // or ...
 const { localISOdt } = require('local-iso-dt');
 
-// Prefix log messages with the current date in the local timezone in YYYY-MM-DDTHH:MM:SS format
+// Prefix log messages with the current date in the
+// local timezone in YYYY-MM-DDTHH:MM:SS format
 console.log(localISOdt(), 'Starting job...');
 
-localISOdt(1500123456);  // 2017-07-15T05:57:36 if you're in the Pacific (-0700) timezone
+// 2017-07-15T05:57:36 if you're in the Pacific (-0700) timezone
+localISOdt(1500123456);
 ```
 
 # License

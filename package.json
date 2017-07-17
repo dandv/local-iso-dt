@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "lint": "eslint index*.js",
-    "prepare": "babel index.js -d lib --minified --no-comments",
+    "prepare": "babel index.js -d lib --minified --no-comments --source-maps",
     "test": "jest"
   },
   "repository": {
