@@ -44,7 +44,7 @@ describe('corner cases', () => {
   });
 
   test('falsy', () => {
-    for (const falsy of ['']) {
+    for (const falsy of [0, '', false, undefined]) {
       if (localISOdt(falsy) === localISOdt()) expect(true).toBe(true);
       else expect(localISOdt(falsy) === localISOdt());
     }
