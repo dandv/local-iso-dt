@@ -18,13 +18,18 @@ Supports and automatically detects the parameter being a:
 # Install
 
 ```sh
-yarn add local-iso-dt
+npm i -s local-iso-dt
 ```
 
 # Usage
 
+This is a native ES6 module that you can use directly in `.mjs` files without Babel. Just pass `--experimental-modules` to node.
+You can also use it the good old `require` way. Learn how to [publish native ES6 modules that are backwards-compatible with Node < 8.5.0](https://medium.com/@dandv/publishing-native-es-modules-with-node-v8-5-0-730736e0f612).
+
+**index.mjs**
+
 ```js
-import { localISOdt } from 'local-iso-dt';  // or ...
+import { localISOdt } from 'local-iso-dt';  // or...
 // const { localISOdt } = require('local-iso-dt');
 
 // Prefix log messages with the current date in the
@@ -33,6 +38,12 @@ console.log(localISOdt(), 'Starting job...');
 
 // 2017-07-15T05:57:36 if you're in the Pacific (-0700) timezone
 localISOdt(1500123456);
+```
+
+Run:
+
+```sh
+node --experimenta-modules index.mjs
 ```
 
 # License
