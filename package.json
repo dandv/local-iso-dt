@@ -33,12 +33,12 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "eslint": "^4",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jest": "^20.0.3",
-    "jest": "^21.2.1"
+    "babel-cli": "^6",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6",
+    "eslint": "^5",
+    "eslint-config-airbnb-base": "^13",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jest": "^21",
+    "jest": "^23"
   }
 }
