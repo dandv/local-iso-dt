@@ -1,6 +1,6 @@
 {
   "name": "local-iso-dt",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Convert the most common types of dates into ISO8601/RFC3339-formatted YYYY-MM-DDTHH:MM:SS strings in the local timezone",
   "main": "index",
   "files": [
@@ -33,12 +33,12 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-modules-commonjs": "^7",
+    "@types/jest": "^24.0.11",
     "eslint": "^5",
-    "eslint-config-airbnb-base": "^13",
-    "eslint-plugin-import": "^2",
-    "eslint-plugin-jest": "^21",
-    "jest": "^23"
+    "eslint-plugin-jest": "^22",
+    "jest": "^24"
   }
 }

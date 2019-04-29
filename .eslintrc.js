@@ -1,6 +1,7 @@
 module.exports = {
   parserOptions: {
-    ecmaVersion: 8,
+    ecmaVersion: 2015,
+    sourceType: 'module',
   },
   env: {
     'jest/globals': true,
@@ -8,9 +9,11 @@ module.exports = {
   plugins: [
     'jest',
   ],
-  extends: ['airbnb-base'],
+  extends: 'eslint:recommended',
   rules: {
-    'import/prefer-default-export': 'off',  // https://basarat.gitbooks.io/typescript/content/docs/tips/defaultIsBad.html
-    'no-mixed-operators': 'off',
+    indent: ['error', 2],
+    'space-in-parens': ['error', 'never'],
+    'space-infix-ops': 'error',  // no `a+b`
+    'no-multi-spaces': ['error', { ignoreEOLComments: true }],
   },
 };
