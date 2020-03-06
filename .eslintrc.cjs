@@ -4,6 +4,7 @@ module.exports = {
     sourceType: 'module',
   },
   env: {
+    node: true,  // the Node global `module` is used in babel.config.cjs
     'jest/globals': true,
   },
   plugins: [

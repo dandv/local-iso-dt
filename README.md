@@ -23,8 +23,8 @@ npm i -s local-iso-dt
 
 # Usage
 
-This is a native ES2015 module that you can use directly in `.mjs` files without Babel. Just pass `--experimental-modules` to node.
-You can also use it the good old `require` way. Learn how to [publish native ES6 modules that are backwards-compatible with Node < 8.5.0](https://medium.com/@dandv/publishing-native-es-modules-with-node-v8-5-0-730736e0f612).
+This is a [hybrid npm package](https://2ality.com/2019/10/hybrid-npm-packages.html) including a native ES2015 module that you can import directly in `.mjs` files without Babel. Just use the latest Node, which [unflagged module support as experimental](https://github.com/nodejs/modules/blob/master/doc/unflagging-announcement.md) in version 13.2.0.
+You can also use it the good old `require` way.
 
 **index.mjs**
 
@@ -43,7 +43,7 @@ localISOdt(1500123456);
 Run:
 
 ```sh
-node --experimental-modules index.mjs
+node index.mjs
 ```
 
 # License
