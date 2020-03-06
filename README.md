@@ -23,14 +23,16 @@ npm i -s local-iso-dt
 
 # Usage
 
-This is a [hybrid npm package](https://2ality.com/2019/10/hybrid-npm-packages.html) including a native ES2015 module that you can import directly in `.mjs` files without Babel. Just use the latest Node, which [unflagged module support as experimental](https://github.com/nodejs/modules/blob/master/doc/unflagging-announcement.md) in version 13.2.0.
-You can also use it the good old `require` way.
+You can import this package directly in `.mjs` or TypeScript files without Babel. Just use the latest Node, which [unflagged module support as experimental](https://github.com/nodejs/modules/blob/master/doc/unflagging-announcement.md) in version 13.2.0.
+You can also use it the good old `require` way by being explicit about the `.js` filename.
 
-**index.mjs**
+This is a [hybrid npm package](https://2ality.com/2019/10/hybrid-npm-packages.html) (created using variation 2.4.1 described on that page).
+
+**index.mjs or index.ts**
 
 ```js
-import { localISOdt } from 'local-iso-dt/index.mjs';  // or...
-// const { localISOdt } = require('local-iso-dt');
+import { localISOdt } from 'local-iso-dt';  // or...
+// const { localISOdt } = require('local-iso-dt/index.js');
 
 // Prefix log messages with the current date in the
 // local timezone in YYYY-MM-DDTHH:MM:SS format
@@ -45,6 +47,16 @@ Run:
 ```sh
 node index.mjs
 ```
+
+or
+
+```
+tsc && node index.js
+```
+
+# Author
+
+[Dan Dascalescu](https://dandascalescu.com)
 
 # License
 
