@@ -28,9 +28,9 @@ npm i local-iso-dt
 
 * TypeScript: `import { localISOdt } from 'local-iso-dt';`
 * ES modules `.mjs` files: `import { localISOdt } from 'local-iso-dt/index.mjs';`
-* Old school CommonJS:  `const { localISOdt } = require('local-iso-dt/index.js');
+* Old school CommonJS:  `const { localISOdt } = require('local-iso-dt/index.js');`
 
-This is a [hybrid npm package](https://2ality.com/2019/10/hybrid-npm-packages.html) (created using variation 2.4.1 described on that page).
+This is a [hybrid npm package](https://2ality.com/2019/10/hybrid-npm-packages.html) (created using variation 2.4.1 described on that page), with [conditional exports](https://nodejs.org/api/esm.html#esm_conditional_exports) that enable named imports even from TypeScript code generating ES Modules, which would otherwise [only](https://github.com/apollographql/apollo-server/issues/1356#issuecomment-681313954) support [default (not named) imports from the CommonJS](https://stackoverflow.com/questions/61549406/how-to-include-commonjs-module-in-es6-module-node-app) target of this package ([TypeScript doesn't support .mjs input files](https://github.com/microsoft/TypeScript/issues/27957)).
 
 
 # Examples

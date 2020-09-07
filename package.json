@@ -1,6 +1,6 @@
 {
   "name": "local-iso-dt",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "description": "Convert the most common types of dates into ISO8601/RFC3339-formatted YYYY-MM-DDTHH:MM:SS strings in the local timezone",
   "keywords": [
     "datetime",
@@ -24,6 +24,13 @@
     "url": "https://github.com/dandv"
   },
   "type": "commonjs",
+  "exports": {
+    "node": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "default": "./index.mjs"
+  },
   "main": "index.js",
   "files": [
     "index.ts",
@@ -33,9 +40,9 @@
   "scripts": {
     "clean": "rm index*.js index.mjs",
     "lint": "eslint index*.ts",
-    "prepublish:cjs": "tsc index.ts --esModuleInterop --removeComments",
-    "prepublish:esm": "tsc index.ts -t ES2015 --types node && mv index.js index.mjs",
-    "prepublish": "npm run prepublish:esm; npm run prepublish:cjs",
+    "prepublishOnly:cjs": "tsc index.ts --esModuleInterop --removeComments",
+    "prepublishOnly:esm": "tsc index.ts -t ES2015 --types node && mv index.js index.mjs",
+    "prepublishOnly": "npm run prepublishOnly:esm; npm run prepublishOnly:cjs",
     "test": "jest"
   },
   "devDependencies": {
@@ -50,7 +57,8 @@
   },
   "comments": {
     "scripts": {
-      "prepublish:esm": "TypeScript can't generate .mjs output directly (https://github.com/microsoft/TypeScript/issues/18442) and --outFile doesn't work with ES Modules"
-    }
+      "prepublishOnly:esm": "TypeScript can't generate .mjs output directly (https://github.com/microsoft/TypeScript/issues/18442) and --outFile doesn't work with ES Modules"
+    },
+    "exports": "[Conditional exports](https://nodejs.org/api/esm.html#esm_conditional_exports) enable TypeScript code transpiled with ES Modules, to use named imports. TypeScript doesn't directly support .mjs input files - https://github.com/microsoft/TypeScript/issues/27957"
   }
 }
