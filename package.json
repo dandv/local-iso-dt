@@ -1,6 +1,6 @@
 {
   "name": "local-iso-dt",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Convert the most common types of dates into ISO8601/RFC3339-formatted YYYY-MM-DDTHH:MM:SS strings in the local timezone",
   "keywords": [
     "datetime",
@@ -24,6 +24,7 @@
     "url": "https://github.com/dandv"
   },
   "type": "commonjs",
+  "main": "index.js",
   "files": [
     "index.*"
   ],
