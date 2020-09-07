@@ -24,7 +24,6 @@
     "url": "https://github.com/dandv"
   },
   "type": "commonjs",
-  "main": "index.mjs",
   "files": [
     "index.*"
   ],
