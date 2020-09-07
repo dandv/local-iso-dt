@@ -1,14 +1,6 @@
 module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'node',
-  testMatch: [
-    '**/*.test.mjs',
-  ],
-  moduleFileExtensions: [
-    'js',  // not used, but MANDATORY
-    'mjs',  // actually used
-  ],
-  transform: {
-    // Transform .mjs files
-    '^.+\\.mjs$': 'babel-jest',
-  },
+  testRegex: '.*.test.ts',  // test only filenames matching this regex
+  moduleFileExtensions: ['ts', 'js'],  // modules are only in .ts files, but 'js' *must* be specified too
 };

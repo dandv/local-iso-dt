@@ -1,4 +1,4 @@
-# localISOdt
+# local-ISO-dt — toISOString() in the local timezone
 
 [![Build Status](https://travis-ci.org/dandv/local-iso-dt.svg?branch=master)](https://travis-ci.org/dandv/local-iso-dt) [![Dependency Status](https://david-dm.org/dandv/local-iso-dt.svg)](https://david-dm.org/dandv/local-iso-dt) [![devDependency Status](https://david-dm.org/dandv/local-iso-dt/dev-status.svg)](https://david-dm.org/dandv/local-iso-dt#info=devDependencies)
 
@@ -15,20 +15,24 @@ Supports and automatically detects the parameter being a:
 * `YYYY-MM-DD[THH:MM:SS]` string
 * falsy value - the current date will be returned
 
+
 # Install
 
 ```sh
-npm i -s local-iso-dt
+npm i local-iso-dt
 ```
+
 
 # Usage
 
-You can import this package directly in `.mjs` or TypeScript files without Babel. Just use the latest Node, which [unflagged module support as experimental](https://github.com/nodejs/modules/blob/master/doc/unflagging-announcement.md) in version 13.2.0.
-You can also use it the good old `require` way by being explicit about the `.js` filename.
-
+* TypeScript: `import { localISOdt } from 'local-iso-dt';`
+* ES modules `.mjs` files: `import { localISOdt } from 'local-iso-dt/index.mjs';`
+* Old school CommonJS:  `const { localISOdt } = require('local-iso-dt/index.js');
+`
 This is a [hybrid npm package](https://2ality.com/2019/10/hybrid-npm-packages.html) (created using variation 2.4.1 described on that page).
 
-**index.mjs or index.ts**
+
+# Examples
 
 ```js
 import { localISOdt } from 'local-iso-dt';  // or...
@@ -42,17 +46,6 @@ console.log(localISOdt(), 'Starting job...');
 localISOdt(1500123456);
 ```
 
-Run:
-
-```sh
-node index.mjs
-```
-
-or
-
-```
-tsc && node index.js
-```
 
 # Author
 

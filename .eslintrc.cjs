@@ -1,10 +1,11 @@
 module.exports = {
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: 'module',
   },
   env: {
-    node: true,  // the Node global `module` is used in babel.config.cjs
+    node: true,  // the Node global `module` is used in this very file, and in jest.config.cjs
     'jest/globals': true,
   },
   plugins: [
