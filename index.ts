@@ -6,10 +6,10 @@
  *   or a UNIX timestamp in (milli/micro/nano)seconds
  * @return {String} ISO8601/RFC3339 `YYYY-MM-DDTHH:MM:SS` string in the local timezone
  */
-export function localISOdt(d?: Date | number | string | boolean) {
+export function localISOdt(d?: Date | number | string | boolean): string {
   if (!d)
     d = new Date();
-  if (/^\d\d\d\d-\d\d-\d\d/.test(d as string)) return d;  // leave YYYY-MM-DD strings unchanged
+  if (/^\d\d\d\d-\d\d-\d\d/.test(d as string)) return d as string;  // leave YYYY-MM-DD strings unchanged
   if (/^\d+\.?\d*$/.test(d as string)) {
     // We have a (possibly fractional) number. Date takes a millisecond argument, so
     if (d < 4102512345) (d as number) *= 1000;  // ...interpret as seconds if before 1/1/2100
