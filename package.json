@@ -1,6 +1,6 @@
 {
   "name": "local-iso-dt",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Convert the most common types of dates into ISO8601/RFC3339-formatted YYYY-MM-DDTHH:MM:SS strings in the local timezone",
   "keywords": [
     "datetime",
@@ -26,13 +26,15 @@
   "type": "commonjs",
   "main": "index.js",
   "files": [
-    "index.*"
+    "index.ts",
+    "index.mjs",
+    "index.js"
   ],
   "scripts": {
+    "clean": "rm index*.js index.mjs",
     "lint": "eslint index*.ts",
-    "clean": "rm index.js index.mjs",
-    "prepublish:esm": "tsc index.ts -t ES2015 --types node && mv index.js index.mjs",
     "prepublish:cjs": "tsc index.ts --esModuleInterop --removeComments",
+    "prepublish:esm": "tsc index.ts -t ES2015 --types node && mv index.js index.mjs",
     "prepublish": "npm run prepublish:esm; npm run prepublish:cjs",
     "test": "jest"
   },
