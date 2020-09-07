@@ -6,6 +6,7 @@ Convert the most common types of dates and timestamps into datetime strings in t
 
 The YYYY-MM-DD date format is great because sorting alphabetically is equivalent to sorting chronologically. Other date formats, in particular the idiosyncratic `m/dd/yy` American format, do not have this property.
 
+
 # Features
 
 Supports and automatically detects the parameter being a:
@@ -28,7 +29,7 @@ npm i local-iso-dt
 * TypeScript: `import { localISOdt } from 'local-iso-dt';`
 * ES modules `.mjs` files: `import { localISOdt } from 'local-iso-dt/index.mjs';`
 * Old school CommonJS:  `const { localISOdt } = require('local-iso-dt/index.js');
-`
+
 This is a [hybrid npm package](https://2ality.com/2019/10/hybrid-npm-packages.html) (created using variation 2.4.1 described on that page).
 
 
@@ -50,6 +51,7 @@ localISOdt(1500123456);
 # Author
 
 [Dan Dascalescu](https://dandascalescu.com)
+
 
 # License
 
